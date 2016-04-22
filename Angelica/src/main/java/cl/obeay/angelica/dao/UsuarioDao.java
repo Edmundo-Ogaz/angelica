@@ -39,7 +39,7 @@ public class UsuarioDao {
 			listUsuarioVO = Mapper.from(listUsuario);
 			tx.commit();
 		} catch (JDBCConnectionException e) {
-			throw new DAOException("Problemas de conexión", e);
+			throw new DAOException("Problemas para acceder a base de datos", e);
 		} catch (Exception e) {
 			throw new DAOException("Problemas para leer usuario", e);
 		} finally {
