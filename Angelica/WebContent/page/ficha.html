@@ -1,0 +1,221 @@
+<style>
+<!--
+.panel-heading-sm {
+    height: 28px;
+    padding: 4px 10px;
+}
+
+.panel-body-sm {
+   padding: 5px 10px;
+}
+
+.nopadding-left {
+   padding-left: 0 !important;
+}
+
+.nopadding-right {  
+   padding-right: 0 !important;
+}
+-->
+</style>
+<div id="ficha">
+	<input type='hidden' id="id"/>
+	<div class="row">
+		<div class="col-md-12">
+			<div class='panel panel-primary'>
+				<div class='panel-heading panel-heading-sm'>
+					Información de la Empresa
+				</div>
+				<div class='panel-body'>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="input-group input-group-sm">
+								<span class="input-group-addon">Sucursal</span>
+								<select id="sucursal" class="form-control"></select>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="input-group input-group-sm">
+								<span class="input-group-addon">Empresa</span>
+								<input type='text' id="empresaNombre" class="form-control" placeholder="Empresa" disabled/>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="input-group input-group-sm">
+								<span class="input-group-addon">Razón Social</span>
+								<input type='text' id="empresaRazonSocial" class="form-control" placeholder="Razón Social" disabled/>
+							</div>
+						</div>
+					</div>
+					<br/>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="input-group input-group-sm">
+								<span class="input-group-addon">Valor Informe</span>
+								<input type='text' id="valorInforme" class="form-control" placeholder="Valor Informe"/>
+							</div>
+						</div>
+					</div>
+				</div>			
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class='panel panel-primary'>
+				<div class='panel-heading panel-heading-sm'>
+					Información del Postulante
+				</div>
+				<div class='panel-body'>				
+					<div class="row">
+						<div class="col-md-2">
+							<div class="input-group input-group-sm">
+								<span class="input-group-addon">Rut</span>
+								<input type='text' id="rut" class="form-control" placeholder="rut"/>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="input-group input-group-sm">
+								<span class="input-group-addon">Nombre</span>
+								<input type='text' id="nombre" class="form-control" placeholder="nombre"/>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="input-group input-group-sm">
+								<span class="input-group-addon">Apellido Paterno</span>
+								<input type='text' id="apellidoPaterno" class="form-control" placeholder="Apellido Paterno"/>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="input-group input-group-sm">
+								<span class="input-group-addon">Apellido Materno</span>
+								<input type='text' id="apellidoMaterno" class="form-control" placeholder="Apellido Materno"/>
+							</div>
+						</div>
+					</div>
+					<br/>
+					<div class="row">
+						<div class="col-md-3">
+							<div class="input-group input-group-sm">
+								<span class="input-group-addon">Teléfono Fijo</span>
+								<input type='text' id="telefono" class="form-control" placeholder="Teléfono Fijo"/>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="input-group input-group-sm">
+								<span class="input-group-addon">Celular</span>
+								<input type='text' id="celular" class="form-control" placeholder="Celular"/>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="input-group input-group-sm">
+								<span class="input-group-addon">Cargo</span>
+								<select id="cargo" class="form-control"></select>
+							</div>
+						</div>					
+						<div class="col-md-2">
+							<!-- <label class="checkbox-inline"><input type="checkbox" id="internoExterno">Interno/Externo</label> -->
+							<div class="input-group input-group-sm">
+								<span class="input-group-addon">
+									<input type='checkbox' id="internoExterno"/>
+								</span>
+								<span class="input-group-addon">Interno/Externo</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class='panel panel-primary'>
+				<div class='panel-heading panel-heading-sm'>
+					Información de Agendamiento
+				</div>
+				<div class='panel-body'>
+					<div class="row">
+						<div class="col-md-4 nopadding-right">
+							<div class="input-group input-group-sm date" id="fechaSolicitud">
+			    				<span class="input-group-addon">Fecha de Solicitud</span>
+			    				<input type="text" class="form-control"/>
+				    			<span class="input-group-addon">
+				    				<span class="glyphicon glyphicon-calendar"></span>
+				    			</span>
+			    			</div>
+						</div>
+						<div class="col-md-4 nopadding-right">
+							<div class="input-group input-group-sm date" id="fechaEntrevista">
+			    				<span class="input-group-addon">Fecha de Entrevista</span>
+			    				<input type="text" class="form-control"/>
+				    			<span class="input-group-addon">
+				    				<span class="glyphicon glyphicon-calendar"></span>
+				    			</span>
+			    			</div>
+						</div>
+						<div class="col-md-4">
+							<div class="input-group input-group-sm date" id="fechaEntregaInforme">
+			    				<span class="input-group-addon">Fecha de Entrega de Informe</span>
+			    				<input type="text" class="form-control"/>
+				    			<span class="input-group-addon">
+				    				<span class="glyphicon glyphicon-calendar"></span>
+				    			</span>
+			    			</div>
+						</div>
+					</div>
+					<br/>
+					<div class="row">
+						<div class="col-md-12">
+							<textarea id="comentarios" class="form-control" rows="3" placeholder="Comentarios"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class='panel panel-primary'>
+				<div class='panel-heading panel-heading-sm'>
+					Información de Informe
+				</div>
+				<div class='panel-body'	>				
+					<div class="row">
+						<div class="col-md-3">
+							<div class="input-group input-group-sm">
+								<span class="input-group-addon">Resultado</span>
+								<input type='text' id="resultado" class="form-control" placeholder="Resultado"/>
+							</div>
+						</div>					
+					</div>
+					<br/>
+					<div class="row">
+						<div class="col-md-4">
+							<input type="hidden"id="nameCurriculum">
+							<div class="input-group input-group-sm">
+								<label>Curriculum</label>
+								<input type="file"id="curriculum">
+							</div>
+						</div>
+						<div class="col-md-4">
+							<input type="hidden" id="nameInforme">
+							<div class="input-group input-group-sm">
+								<label>Informe</label>
+								<input type="file" id="informe">
+							</div>
+						</div>
+						<div class="col-md-4">
+							<input type="hidden" id="namePerfil">
+							<div class="input-group input-group-sm">
+								<label>Perfil</label>
+								<input type="file" id="perfil">
+							</div>
+						</div>
+					</div>
+				</div>			
+			</div>
+		</div>
+	</div>
+	<button type="button" id="add" class="btn btn-default">Agregar</button>
+	<button type="button" id="cancelar" class="btn btn-default">Cancelar</button>
+</div>

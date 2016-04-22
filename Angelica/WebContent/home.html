@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		
+		<title>Angelica</title>
+		
+		<link rel="stylesheet" type="text/css" href="resource/css/vendor/bootstrap/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="resource/css/vendor/bootstrap/datetimepicker/bootstrap-datetimepicker.css"/>
+		<link rel="stylesheet" type="text/css" href="resource/css/vendor/jqGrid/ui.jqgrid-4.4.3.css"/>
+		<link rel="stylesheet" type="text/css" href="resource/css/vendor/jQuery/redmond/jquery-ui.css"/>
+		<link rel="stylesheet" type="text/css" href="resource/css/vendor/fileinput/krajee/fileinput.css" media="all"/>
+		
+		<script data-main="resource/js/config/homeConfig" src="resource/js/vendor/require/require.js"></script>
+		
+      	<!--[if lt IE 9]>
+		<script src="resource/js/vendor/respond/respond.js"></script>
+		<script src="resource/js/vendor/html5shiv/aFarkas/html5shiv.js"></script>
+		<script src="resource/js/vendor/console/paulmillr/console-polyfill.js"></script>
+		<![endif]-->
+    
+	</head>
+	<body>
+		<div class="container-fluid">
+			<img src="resource/images/palmera.jpg.HIDEN" class="img-responsive"></img>
+			<div id="body">
+				<div id="state"></div>
+				<div id="cargando"></div>
+				<div id="dialog"></div>
+				<div id="menu"></div>
+				<div class="row">
+					<div class="col-md-6">
+						<h3 id="titulo"></h3>
+					</div>
+					<div class="col-md-2">
+						<button type="button" id="ficha" class="btn btn-default">Crear Ficha</button>
+					</div>
+					<div class="col-md-2">
+						<div class="input-group date" id="fecha" >
+		    				<span class="input-group-addon">Fecha</span>
+		    				<input type="text" class="form-control"/>
+			    			<span class="input-group-addon">
+			    				<span class="glyphicon glyphicon-calendar"></span>
+			    			</span>
+		    			</div>
+		    		</div>
+		    	</div>
+				<hr/>
+				<div id="page"></div>
+			</div>
+		</div>
+	</body>
+</html>
