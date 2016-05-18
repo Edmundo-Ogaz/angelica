@@ -169,7 +169,8 @@ define(["jquery", "jqGrid", "bootstrap-datetimepicker", "moment", "underscore", 
 					            	'fechaEntregaInforme' : fichaSave.fechaEntregaInforme,
 						            };
 	    			var fichas = $('#state').data('fichas');
-	 				if(underscore.where(fichas, {id : fichaSave.id})) {
+	    			var exist = underscore.where(fichas, {id : fichaSave.id}).length > 0 ? true : false;
+	    			if(exist) {
 	 					//UPDATE GRID
 	 					for(var i=0; i<fichas.length; i++) {
 	 						if(fichas[i].id == fichaSave.id) {
