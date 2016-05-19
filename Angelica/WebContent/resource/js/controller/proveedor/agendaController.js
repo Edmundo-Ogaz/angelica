@@ -185,7 +185,7 @@ define(["jquery", "jqGrid", "bootstrap-datetimepicker", "moment", "underscore", 
 	 				} else {
 	 					//ADD GRID	 					
 	 					jQuery("#pendienteAgendamientoGrid").jqGrid('addRowData', fichaSave.id, fichaGrid);
-	 					fichas.push(ficha);
+	 					fichas.push(fichaSave);
 	 				}
 	    		}		
 	        });			
